@@ -31,13 +31,19 @@
                         <label for="zip" class="hidden">ZIP</label>
                         <input id="zip" type="text" maxlength="5" class="form-field" placeholder="ZIP code" required />
                     </div>
+                    <label class="js-zipValidation validationError hidden">
+                        Please enter a valid zip code.
+                    </label>
     
                     <div class="hero-cta-form-group">
                         <label class="form-checkbox-container">
                             I agree to the terms and conditions.
-                            <input id="agreement" type="checkbox" class="form-checkbox" required />
+                            <input id="agreement" type="checkbox" class="form-checkbox" />
                             <span class="form-checkmark"></span>
-                        </span>
+                        </label>
+                        <label class="js-agreementValidation validationError hidden">
+                            Agreement is required.
+                        </label>
                     </div>
 
                     <button id="submit" type="submit" class="cta-button" value="Sign Up">Sign Up</button>
@@ -53,7 +59,7 @@
                             Loading...
                         </div>
                     </div>
-                    <div class="js-weatherInfo hero-card-info hidden">
+                    <div class="js-weatherInfo hero-card-info visuallyHidden">
                         <h3 class="h3 js-location"></h3>
 
                         <p>
@@ -68,6 +74,8 @@
                 </div>
             </div>
         </div>
+        <script src="js/utility.js"></script>
+        <script src="js/validation.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

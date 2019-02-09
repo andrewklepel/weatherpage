@@ -77,12 +77,16 @@ p {
     padding-bottom: .5rem;
 }
 
-.hidden {
+.visuallyHidden {
     visibility: hidden !important;
     opacity: 0 !important;
     height: 0px !important;
     width: 0px !important;
     position: absolute;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .form-field {
@@ -93,3 +97,25 @@ p {
     font-size: .8rem;
     color: rgb(26, 80, 123);
 }
+
+.validationError {
+    background: #c51244;
+    padding: 1rem;
+    border-radius: .5rem;
+    position: relative;
+    display: inline-block;
+    box-shadow: 1px 1px 1px #aaaaaa;
+    margin-top:.3rem;
+    margin-bottom: 1rem;
+}
+
+.validationError:before{
+    content: '';
+    width: 0;  
+    height: 0;  
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #c51244;
+    position: absolute;  
+    top: -10px; 
+  }

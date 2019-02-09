@@ -1,7 +1,9 @@
 # Instructions
-Site can be viewed at andrewklepel.github.io
+This site can be viewed at https://andrewklepel.github.io
 
 This is a static HTML site; all you need to do to run it locally is download the source and open index.html in a web browser.
+
+This site assumes that your browser supports ES6, which is supported by most browsers at this point. For more details check out https://caniuse.com/#search=es6
 
 # Conversion optimization notes
 * The main heading copy explains the convenience provided by signing up.
