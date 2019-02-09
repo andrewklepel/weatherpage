@@ -34,6 +34,14 @@
     max-width: 15rem;
 }
 
+.hero-card-info {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+
+    transition: visibility 0s linear 0.6s, opacity 0.6s linear;
+}
+
 .hero-cta-form {
     display: flex;
     flex-direction: column;
