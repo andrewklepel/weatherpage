@@ -20,50 +20,48 @@
         </script>
     </head>
     <body>
-        <div class="page-container">
-            <div class="hero-container">
-                <div class="container hero-left-col">
-                    <h1 class="h1">Daily weather updates at your fingertips</h1>
-                    <h2 class="h2">Subscribe now and never get stuck out in the rain again</h2>
-                    <form class="hero-cta-form">
-                        <div class="hero-cta-form-group">
-                            <label for="zip" class="hidden">ZIP</label>
-                            <input id="zip" type="text" maxlength="5" class="form-field" placeholder="ZIP code" required />
-                        </div>
-        
-                        <div class="hero-cta-form-group">
-                            <label class="form-checkbox-container">
-                                I agree to the terms and conditions.
-                                <input id="agreement" type="checkbox" class="form-checkbox" required />
-                                <span class="form-checkmark"></span>
-                            </span>
-                        </div>
+        <div class="hero-container">
+            <div class="container hero-left-col">
+                <h1 class="h1">Daily weather updates at your fingertips</h1>
+                <h2 class="h2">Subscribe now and never get stuck out in the rain again</h2>
+                <form class="hero-cta-form">
+                    <div class="hero-cta-form-group">
+                        <label for="zip" class="hidden">ZIP</label>
+                        <input id="zip" type="text" maxlength="5" class="form-field" placeholder="ZIP code" required />
+                    </div>
     
-                        <button id="submit" type="submit" class="cta-button" value="Sign Up">Sign Up</button>
+                    <div class="hero-cta-form-group">
+                        <label class="form-checkbox-container">
+                            I agree to the terms and conditions.
+                            <input id="agreement" type="checkbox" class="form-checkbox" required />
+                            <span class="form-checkmark"></span>
+                        </span>
+                    </div>
+
+                    <button id="submit" type="submit" class="cta-button" value="Sign Up">Sign Up</button>
+                    </p>
+                </form>
+            </div>
+
+            <div class="container hero-right-col">
+                <div class="hero-card">
+                    <div class="js-loading loading hero-card-info">
+                        <img src="./assets/img/loading.gif">
+                        <div class="loading-text">
+                            Loading...
+                        </div>
+                    </div>
+                    <div class="js-weatherInfo hero-card-info hidden">
+                        <h3 class="h3 js-location"></h3>
+
+                        <p>
+                            <img class="js-weatherIcon weather-icon"></img>
+                            <span class="js-temperature current-temp"></span>
                         </p>
-                    </form>
-                </div>
 
-                <div class="container hero-right-col">
-                    <div class="hero-card">
-                        <div class="js-loading loading hero-card-info">
-                            <img src="./assets/img/loading.gif">
-                            <div class="loading-text">
-                                Loading...
-                            </div>
-                        </div>
-                        <div class="js-weatherInfo hero-card-info hidden">
-                            <h3 class="h3 js-location"></h3>
-
-                            <p>
-                                <img class="js-weatherIcon weather-icon"></img>
-                                <span class="js-temperature current-temp"></span>
-                            </p>
-
-                            <p class="js-temperatureHigh"></p>
-                            <p class="js-temperatureLow"></p>
-                            <p class="js-description"></p>
-                        </div>
+                        <p class="js-temperatureHigh"></p>
+                        <p class="js-temperatureLow"></p>
+                        <p class="js-description"></p>
                     </div>
                 </div>
             </div>
