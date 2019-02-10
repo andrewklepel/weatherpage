@@ -53,3 +53,42 @@
 .hero-cta-form-group {
     padding-bottom: 1rem;
 }
+
+.weather-icon {
+    vertical-align: middle;
+}
+
+.loading img {
+    background-size: cover;
+    height: 2rem;
+    width: 2rem;
+    float: left;
+}
+
+.loading-text {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 2.5rem;
+}
+
+.current-temp {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.cta-button {
+    background-color: rgb(27, 76, 116);
+	-moz-border-radius:1rem;
+	-webkit-border-radius:1rem;
+	border-radius:1rem;
+    border: 0;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+    font-size:17px;
+    font-weight: bold;
+	padding:16px 31px;
+    text-decoration:none;
+    width: 50%;
+}
