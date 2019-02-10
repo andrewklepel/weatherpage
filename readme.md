@@ -5,7 +5,7 @@ This is a static HTML site; all you need to do to run it locally is download the
 
 To run the JS+SCSS build task, execute "npm run build" in a terminal. (note: this requires node.js v10.15.1 to be set up and running on your computer)
 
-This site assumes that your browser supports ES6, which is supported by most browsers at this point. For more details check out https://caniuse.com/#search=es6
+The build process includes Babel, so there won't be any issues with using newer ES6 features in the JS codebase.
 
 # Conversion optimization notes
 * The main heading copy explains the convenience provided by signing up.
