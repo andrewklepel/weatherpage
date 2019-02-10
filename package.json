@@ -1,0 +1,25 @@
+{
+  "name": "andrewklepel.github.io",
+  "version": "1.0.0",
+  "description": "Weather landing page case study",
+  "main": "src/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --mode=production",
+    "watch": "webpack --progress --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewklepel/andrewklepel.github.io.git"
+  },
+  "author": "Andrew Klepel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewklepel/andrewklepel.github.io/issues"
+  },
+  "homepage": "https://github.com/andrewklepel/andrewklepel.github.io#readme",
+  "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
+}
