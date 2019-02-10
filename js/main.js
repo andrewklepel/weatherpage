@@ -5,6 +5,9 @@
 // library like handlebars, knockout, angular, etc. to bind data from
 // the API onto the page
 
+import utilities from './utility.js';
+import validate from './validation.js';
+
 (function() {
     var initializePage = function() {
         var url = 'https://j9l4zglte4.execute-api.us-east-1.amazonaws.com/api/ctl/weather';
@@ -23,16 +26,16 @@
 
     // bind data to the page after API call has completed
     var updateWeatherInfo = function(data) {
-        setElement('js-location', `${data.today.city}, ${data.today.state}`);
-        setElement('js-temperature', `${Math.round(data.today.temperature)}&deg;`);
-        setElement('js-temperatureHigh', `High: ${Math.round(data.today.highTemperature)}&deg;`);
-        setElement('js-temperatureLow', `Low: ${Math.round(data.today.lowTemperature)}&deg;`);
-        setElement('js-description', data.today.description);
+        utilities.setElement('js-location', `${data.today.city}, ${data.today.state}`);
+        utilities.setElement('js-temperature', `${Math.round(data.today.temperature)}&deg;`);
+        utilities.setElement('js-temperatureHigh', `High: ${Math.round(data.today.highTemperature)}&deg;`);
+        utilities.setElement('js-temperatureLow', `Low: ${Math.round(data.today.lowTemperature)}&deg;`);
+        utilities.setElement('js-description', data.today.description);
 
-        removeClass('js-weatherInfo', 'visuallyHidden');
-        addClass('js-loading', 'visuallyHidden');
+        utilities.removeClass('js-weatherInfo', 'visuallyHidden');
+        utilities.addClass('js-loading', 'visuallyHidden');
         
-        setAttr('js-weatherIcon', 'src', data.today.iconLink);
+        utilities.setAttr('js-weatherIcon', 'src', data.today.iconLink);
     };
 
     // validate form, and track signup events via Google Analytics
@@ -40,7 +43,7 @@
         // stop form POST event from happening
         event.preventDefault();
 
-        var valid = validateForm();
+        var valid = validate();
 
         if (valid) {
             ga('send', 'event', 'Button', 'Clicked', 'Landing Page Signup', 0);

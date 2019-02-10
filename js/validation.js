@@ -1,6 +1,7 @@
-// validate the form on the landing page
+import utilities from './utility.js';
 
-var validateForm = function() {
+// validate the form on the landing page
+export default function() {
     var zip = document.getElementById('zip').value;
     var agreement = document.getElementById('agreement').checked;
 
@@ -9,24 +10,24 @@ var validateForm = function() {
 
     // validate that zip code is valid
     if (!/(^\d{5}$)/.test(zip)) {
-        displayValidationError('js-zipValidation');
+        showValidationError('js-zipValidation');
         return false;
     // validate that agreement is checked
     } else if (!agreement) {
-        displayValidationError('js-agreementValidation');
+        showValidationError('js-agreementValidation');
         return false;
     } else {
         return true;
     };
 }
     
-var displayValidationError = function(id) {
-    removeClass(id, 'hidden');
+var showValidationError = function(id) {
+    utilities.removeClass(id, 'hidden');
 }
 
 var hideValidationError = function(id) {
-    classes = document.getElementsByClassName(id)[0].className;
+    var classes = document.getElementsByClassName(id)[0].className;
     if (!classes.includes('hidden')) {
-        addClass(id, 'hidden');
+        utilities.addClass(id, 'hidden');
     }
 }
